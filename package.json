@@ -1,0 +1,57 @@
+{
+  "name": "pixel-avatars",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.15.1",
+  "description": "a simple pixel avatar generator",
+  "license": "MIT",
+  "repository": "meitrix8208/pixel-avatars",
+  "keywords": [
+    "avatar",
+    "generator",
+    "pixel"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "pixel-avatars": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "vitest dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "release": "pnpm build && pnpm test && pnpm publish && git push --follow-tags",
+    "test": "tsc --noEmit --skipLibCheck"
+  },
+  "dependencies": {
+    "sharp": "0.33.5",
+    "vitest": "2.1.8"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "3.12.0",
+    "@types/node": "22.10.2",
+    "citty": "0.1.6",
+    "eslint": "9.17.0",
+    "typescript": "5.7.2",
+    "unbuild": "3.0.1"
+  }
+}
