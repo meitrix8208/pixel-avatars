@@ -1,7 +1,7 @@
 {
   "name": "pixel-avatars",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "packageManager": "pnpm@9.15.1",
   "description": "a simple pixel avatar generator",
   "license": "MIT",
@@ -43,12 +43,12 @@
     "test": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
+    "citty": "0.1.6",
     "sharp": "0.33.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "3.12.0",
     "@types/node": "22.10.2",
-    "citty": "0.1.6",
     "eslint": "9.17.0",
     "typescript": "5.7.2",
     "unbuild": "3.0.1",
