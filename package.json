@@ -38,7 +38,7 @@
     "dev": "vitest dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "release": "pnpm build && pnpm test && pnpm publish && git push --follow-tags",
+    "release": "pnpm build --minify && pnpm test && pnpm publish && git push --follow-tags",
     "test": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {

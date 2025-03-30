@@ -41,26 +41,26 @@ npx pixel-avatars --colors=5 --width=512 --height=512 --pwidth=12 --pheight=12 -
 ### API
 
 ```typescript
-import { generateImage } from 'pixel-avatars';
+import { generateImage } from "pixel-avatars";
 
 // Generate a basic avatar
 const image = await generateImage({
-  filename: 'avatar.png'
+  filename: "avatar.png"
 });
 
 // Generate a customized avatar
 const customImage = await generateImage({
-  colors: 5,         // Number of colors to use
-  width: 512,        // Output image width in pixels
-  height: 512,       // Output image height in pixels
-  pwidth: 12,        // Pattern width (higher = more complex)
-  pheight: 12,       // Pattern height (higher = more complex)
-  seed: 'username',  // Deterministic seed value
-  filename: 'custom-avatar.png' // Optional output filename
+  colors: 5, // Number of colors to use
+  width: 512, // Output image width in pixels
+  height: 512, // Output image height in pixels
+  pwidth: 12, // Pattern width (higher = more complex)
+  pheight: 12, // Pattern height (higher = more complex)
+  seed: "username", // Deterministic seed value
+  filename: "custom-avatar.png" // Optional output filename
 });
 
 // Use with Sharp for further processing
-await customImage.blur(5).toFile('blurred-avatar.png');
+await customImage.blur(5).toFile("blurred-avatar.png");
 ```
 
 ## API Reference
